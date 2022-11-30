@@ -1,8 +1,15 @@
 <template>
-  <div id="Spielplan">
-    <tr v-for="groups in data">
-      <td>{{ data.groups[0] }}</td>
-    </tr>
+  <!--<div id="Spielplan">
+    <div v-for="groups in data">
+      <div v-for="group in groups" class="group">
+        {{ group.group }}
+        {{ group.members }}
+      </div>
+    </div>
+  </div>-->
+
+  <div v-for="(item, index) in data.flags" :key="index">
+    {{ item }}
   </div>
 </template>
 
@@ -12,10 +19,10 @@ import { useFetch } from '../composable/UseFetch.js';
 const prev = 0;
 export default {
   name: 'Main',
-  setup() {
-    const { data, error, loading } = useFetch(
+  async setup() {
+    const { data, error, loading } = await useFetch(
       'https://raw.githubusercontent.com/htlWels/WM/main/spielplan.json',
-      {}
+      {'content-type': 'application/json'}
     );
 
     function check(userId) {}
@@ -47,5 +54,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.group {
+  border: 1px solid;
 }
 </style>

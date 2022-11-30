@@ -1,9 +1,17 @@
 <template>
-  <div id="app">
+<Suspense>
+  <template #default>
+    <Main />
+  </template>
+  <template #fallback>
+    <span>Loading....</spany>
+  </template>
+</Suspense>
+  <!--<div id="app">
     <Header />
     <Main />
     <Footer />
-  </div>
+  </div>-->
 </template>
 
 <script>

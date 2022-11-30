@@ -1,5 +1,7 @@
 <template>
-  <h3>Hier könnte Ihre Werbung stehen<h3>
+  <br />
+  <hr />
+  Hier könnte Ihre Werbung stehen
 </template>
 
 <script>
