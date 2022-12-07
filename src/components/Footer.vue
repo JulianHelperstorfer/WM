@@ -1,4 +1,5 @@
 <template>
+<br  />
   <br />
   <hr />
   Hier könnte Ihre Werbung stehen

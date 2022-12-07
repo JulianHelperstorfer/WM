@@ -1,6 +1,7 @@
 <template>
   <h1>WM</h1>
   <hr />
+  <br />
 </template>
 
 <script>

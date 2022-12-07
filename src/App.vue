@@ -4,7 +4,7 @@
     <Main />
   </template>
   <template #fallback>
-    <span>Loading....</spany>
+    <span>Loading....</span>
   </template>
 </Suspense>
   <!--<div id="app">
@@ -15,15 +15,13 @@
 </template>
 
 <script>
-import Header from './components/Header.vue';
+
 import Main from './components/Main.vue';
-import Footer from './components/Footer.vue';
+
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Footer,
     Main,
   },
 };
